@@ -78,7 +78,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="&quot;Membangun Aplikasi Android Modern&quot;"
+                    android:text="&quot;Membangun Aplikasi Android Modern&quot;"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
