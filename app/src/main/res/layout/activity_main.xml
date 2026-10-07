@@ -520,7 +520,7 @@
             android:orientation="horizontal">
 
             <LinearLayout
-                android:id="@+id/btnAbout"
+                android:id="@+id/about"
                 android:layout_width="201dp"
                 android:layout_height="wrap_content"
                 android:background="#789abc"
@@ -544,7 +544,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="5dp"
-                android:background="#333333">
+                android:background="#333333"
+                android:id="@+id/email">
 
                 <ImageView
                     android:layout_width="25dp"
