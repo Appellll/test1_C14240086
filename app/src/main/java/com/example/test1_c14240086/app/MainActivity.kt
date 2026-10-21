@@ -3,9 +3,11 @@ package com.example.test1_c14240086.app
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.ListView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -73,8 +75,28 @@ class MainActivity : AppCompatActivity() {
             startActivity(_itemIntent)
         }
 
+        data.addAll(listOf(_item1,_item2,_item3,_item4))
+
+        val listAdapter = ArrayAdapter(
+            this,
+            android.R.layout.simple_list_item_1,
+            data
+        )
+
+        val _listKegiatan = findViewById<ListView>(R.id.listKegiatan)
+        _listKegiatan.adapter = listAdapter
+
+
+        val _tambah = findViewById<LinearLayout>(R.id.tambah)
         val _about = findViewById<LinearLayout>(R.id.about)
         val _email = findViewById<LinearLayout>(R.id.email)
+
+        _tambah.setOnClickListener {
+            val _tambahIntent = Intent(
+                this@MainActivity, Tambah::class.java
+            )
+            startActivity(_tambahIntent)
+        }
 
         _about.setOnClickListener {
             val _aboutIntent = Intent(
@@ -92,4 +114,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(_emailIntent)
         }
     }
+
+    var data = mutableListOf<LinearLayout>()
 }

@@ -110,6 +110,10 @@
 
         </LinearLayout>
 
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listKegiatan"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -521,11 +525,12 @@
 
             <LinearLayout
                 android:id="@+id/about"
-                android:layout_width="201dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#789abc"
                 android:orientation="horizontal"
-                android:padding="5dp">
+                android:padding="5dp"
+                android:layout_margin="10dp">
 
                 <ImageView
                     android:layout_width="25dp"
@@ -540,12 +545,13 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:padding="5dp"
                 android:background="#333333"
-                android:id="@+id/email">
+                android:id="@+id/email"
+                android:layout_margin="10dp">
 
                 <ImageView
                     android:layout_width="25dp"
@@ -558,6 +564,24 @@
                     android:text="Hubungi Developer"
                     android:textColor="#FFFFFF"/>
             </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tambah"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#789ccc"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tambahkan Event"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
